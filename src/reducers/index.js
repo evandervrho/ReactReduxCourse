@@ -4,9 +4,13 @@
 
 import {combineReducers} from 'redux';
 import courses from './courseReducer';
+import authors from './authorReducer';
+import ajaxCallsInProgress from './ajaxStatusReducer';
 
 const rootReducer = combineReducers({
-  courses // could use courses:courses ES6 shorthand property name
+  courses,
+  authors, // could use courses:courses ES6 shorthand property name
+  ajaxCallsInProgress
 });
 
 export default rootReducer;
